@@ -1,2 +1,2 @@
 # mobile
-Trillo developer mobile application for Android, IPhone and others.
+Trillo developer mobile application for Android, iPhone and others.
