@@ -15,6 +15,10 @@ export class AppComponent {
     private statusBar: StatusBar
   ) {
     this.initializeApp();
+    this.platform.backButton.subscribe(() => {
+      // code that is executed when the user pressed the back button
+      navigator['app'].exitApp();
+    })
   }
 
   initializeApp() {
@@ -23,4 +27,5 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
+
 }
