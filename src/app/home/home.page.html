@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="primary" style="text-align: center">
+    <ion-title>
+      Trillo Developer App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light" padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>URL: </ion-label>
+          <ion-input type="url" [(ngModel)]="url"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="text-align: center">
+        <ion-button color="primary" block solid large (click)="openWithInAppBrowser(url)">Launch Application
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="text-align: center">
+        <img src="../assets/images/Trillo.svg" />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-col style="text-align: center">
+        <ion-label>2019, Trillo Inc.</ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>
