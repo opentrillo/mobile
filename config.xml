@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget android-versionCode="10" id="io.trillo.mobile" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Trillo DevApp</name>
+    <name>Trillo</name>
     <description>Trillo Developer App</description>
     <author email="info@trillo.io" href="https://www.trillo.io">Trillo Team</author>
     <content src="index.html" />
@@ -83,6 +83,6 @@
     <plugin name="cordova-plugin-ionic-webview" spec="^3.0.0" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
     <plugin name="cordova-plugin-inappbrowser" spec="3.0.0" />
-    <engine name="android" spec="7.1.4" />
-    <engine name="ios" spec="~4.5.5" />
+    <engine name="android" spec="^7.1.4" />
+    <engine name="ios" spec="^4.5.5" />
 </widget>
