@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser/ngx';
+import {Component} from '@angular/core';
+import {InAppBrowser} from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-home',
@@ -7,31 +7,21 @@ import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser/
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  public url : string;
-  options: InAppBrowserOptions = {
-    location: 'no',//Or 'no' 
-    hidden: 'no', //Or  'yes'
-    clearcache: 'yes',
-    clearsessioncache: 'yes',
-    zoom: 'no',//Android only ,shows browser zoom controls 
-    hardwareback: 'yes',
-    mediaPlaybackRequiresUserAction: 'no',
-    shouldPauseOnSuspend: 'no', //Android only 
-    closebuttoncaption: 'Close', //iOS only
-    disallowoverscroll: 'no', //iOS only 
-    toolbar: 'no', //iOS only 
-    enableViewportScale: 'no', //iOS only 
-    allowInlineMediaPlayback: 'no',//iOS only 
-    presentationstyle: 'pagesheet',//iOS only 
-    fullscreen: 'yes',//Windows only    
-  };
-  
-  constructor(private theInAppBrowser: InAppBrowser) { }
+  public url: string;
 
-  public openWithInAppBrowser(_url: string) {
-    if (_url != null) {
-      let target = "_blank";
-      this.theInAppBrowser.create(_url, target, this.options);
-    }
+  constructor(private theInAppBrowser: InAppBrowser) {
+    this.url = "https://www.trillo.io" //change this url to any Trillo application
+  }
+
+  ngOnInit() {
+    const browser = this.theInAppBrowser.create(
+        this.url,
+        '_self',
+        'hardwareback=no,' +
+        'location=no,' +
+        'toolbar=no,' +
+        'clearcache=no,' +
+        'clearsessioncache=no'
+    );
   }
 }
